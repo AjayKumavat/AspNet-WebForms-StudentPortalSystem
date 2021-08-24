@@ -1,0 +1,255 @@
+﻿/*-----------------------------------------*/
+/* ----------------------------------------*/
+/* UNIVERSAL ADMIN, STUDENT, STAFF */
+/*-----------------------------------------*/
+/* ----------------------------------------*/
+
+
+
+/* UNIVERSAL BODY SETTINGS */
+/* STICKY NAV PROPERTIES */
+.admin-body {
+    margin-right: 260px;
+}
+
+/* Admin.html - row settings (to keep the things in the middle of the page) */
+.admin-row {
+    max-width: 890px;
+    margin: 0 auto;
+}
+
+/*-----------------------------------------*/
+/* PROFILE PROPERTIES (IMAGE AND USERNAME) */
+/* ----------------------------------------*/
+
+/* Admin Profile : hover */
+.admin-logo img:hover {
+    transform: scale(0.9);
+    transition: transform 0.5s;
+}
+
+.sticky-username {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+.sticky-user-profile {
+    display: block;
+}
+
+    .sticky-user-profile li:last-child {
+        padding-bottom: 10px;
+    }
+/*-----------------------------------------*/
+/* ----------------------------------------*/
+
+/* Background image */
+.admin-background {
+    /* In linear-gradient we have added black color with 70% transparency */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../img/HappyStudents.jpg'); /* linking image in css */
+    background-size: cover; /* image is too big in size and only a part of image is visible so to avoid this we write this code */
+    background-position: center; /* This will always keep the image centered, even if we resize the browser window */
+    height: 100vh; /* 100% of the viewport */
+    background-attachment: fixed; /* background image will stay at fix position */
+}
+
+
+
+
+/* Admin page - sticky nav */
+
+/* Admin profile pic */
+.sticky-user-profile li img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    cursor: pointer;
+    height: auto;
+    padding: 20px 20px 5px 20px;
+    background-color: #212121;
+    transition: padding 0.4s;
+}
+
+    .sticky-user-profile li img:hover {
+        padding: 30px 30px 15px 30px;
+        transition: padding 0.4s;
+    }
+
+/* sticky nav - properties */
+
+.admin-nav {
+    max-width: 260px;
+    background-color: #212121;
+    border: none;
+    display: block;
+    float: right;
+    position: fixed; /* for fixed position */
+    top: 0; /* we want to display it on the top left so we need to mention it */
+    right: 0;
+    height: 100%;
+    box-shadow: 0 2px 2px #efefef; /* X axis , y axis, blur , color */
+    z-index: 9999;
+    overflow: scroll;
+    overflow-x: hidden; /* to hide the x-axis or horizontal scrollbar */
+}
+
+    /* sticky nav - list */
+    .admin-nav ul li {
+        display: block;
+        list-style: none;
+        text-align: left;
+    }
+
+
+    /* sticky nav - links edit */
+    .admin-nav li a:link,
+    .admin-nav li a:visited {
+        width: 250px;
+        float: right;
+        color: #e5e1e1;
+        background-color: #212121;
+        padding: 20px 20px 20px 40px;
+        list-style: none;
+        text-decoration: none; /* for removing underline from the text */
+        text-transform: uppercase;
+        border-bottom: none;
+        font-size: 90%;
+    }
+
+    /* Admin Sticky Nav - hover */
+
+    .admin-nav li a:hover,
+    .admin-nav li a:active {
+        background-color: #e67e22;
+        color: #fff;
+        transition: background-color 0.1s, transform 0.1s;
+    }
+
+/* STICKY NAV ICON PROPERTIES */
+.icon-module-sticky-nav {
+    display: inline-block;
+    position: absolute;
+    left: -5px;
+    font-size: 100%;
+    opacity: 0;
+    margin-right: 8px;
+    transition: all 0.6s;
+}
+
+
+/* DISPLAY ICON AFTER HOVERING CURSOR ON THE STICKY NAV LINKS */
+.admin-nav li a:hover i {
+    opacity: 1;
+    left: 15px;
+    transform: scale(1.5);
+    transition: all 0.4s;
+}
+/*-----------------------------------------*/
+/* ----------------------------------------*/
+/* xxxxxxxxxxxxxxx UNIVERSAL ADMIN, STUDENT, STAFF xxxxxxxxxxxxx */
+/*-----------------------------------------*/
+/* ----------------------------------------*/
+
+
+
+/* ------------------------------------------ */
+/* REGISTRATION (Registration.aspx) */
+/* ------------------------------------------ */
+.registration-form {
+    width: 60%; /* 60% OF ROW WIDTH */
+    margin: 0 auto; /* CENTERED */
+}
+
+.section-otp {
+    display: block;
+    background-color: #f4f4f4;
+    height: 100%;
+}
+
+/* SECTION HEIGHT */
+.section-registration {
+    height: 1300px;
+}
+
+.registration-form-labels {
+    margin-left: 40px;
+    display: inline-block;
+    padding-top: 12px;
+}
+
+/* ------------------------------------------ */
+/* HOME (Home.aspx) */
+/* ------------------------------------------ */
+
+
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* ------------------------------------------ */
+/* UNIVERSAL CSS FOR ADMIN MODULE */
+/* ------------------------------------------ */
+
+/* WIDTH OF THE FORM PART */
+.form-width {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* MULTIPLE ACTION BUTTONS */
+.multi-btn {
+    display: inline-block;
+    float: right;
+}
+
+.module-form-btn {
+    margin-top: 30px;
+}
+
+
+/* TEXTBOX SETTINGS */
+.add-staff-textbox {
+    width: 100%;
+    border-radius: 3px;
+    padding: 7px;
+    height: 40px;
+    border: 1px solid #ccc;
+}
+
+/* To get rid of unnecesary highligthing of borders when we click on them */
+*:focus {
+    outline: none;
+}
+
+/* Button on the right side of the dropdownlist */
+.half-button-box {
+    display: inline-block;
+    margin-right: 15px; /* Adding some space between buttons */
+    padding: 10px 30px; /* Top bottom = 10px, left right = 30px */
+    font-weight: 300;
+    border-radius: 0px;
+    text-decoration: none; /* we added this line to remove the underline of the text */
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+/* GRID VIEW UNIVERSAL STYLING */
+.grid-view-data-table {
+    overflow: auto;
+    height: 500px;
+    border: 2px solid #cccccc;
+    border-radius: 7px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.dashboard-grid-view-data-table {
+    overflow: auto;
+    height: 350px;
+    border: 2px solid #cccccc;
+    border-radius: 7px;
+    width: 100%;
+}
+
+/* xxxxxxxxxxxx GRID VIEW xxxxxxxxxxxxx*/

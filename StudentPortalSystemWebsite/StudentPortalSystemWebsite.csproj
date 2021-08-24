@@ -1,0 +1,409 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{788C80B0-CC5B-47CF-A15B-FF3D9862A35D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StudentPortalSystemWebsite</RootNamespace>
+    <AssemblyName>StudentPortalSystemWebsite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44377</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminModule\Activity.aspx" />
+    <Content Include="AdminModule\AddMarks.aspx" />
+    <Content Include="AdminModule\ApproveStudent.aspx" />
+    <Content Include="AdminModule\Attendance.aspx" />
+    <Content Include="AdminModule\ChangePassword.aspx" />
+    <Content Include="AdminModule\CourseDetails.aspx" />
+    <Content Include="AdminModule\Default.aspx" />
+    <Content Include="AdminModule\Home.aspx" />
+    <Content Include="AdminModule\ManageStaff.aspx" />
+    <Content Include="AdminModule\Notice.aspx" />
+    <Content Include="AdminModule\resources\css\AdminStyleSheet.css" />
+    <Content Include="AdminModule\resources\img\Discussion.jpg" />
+    <Content Include="AdminModule\resources\img\Staff.svg" />
+    <Content Include="AdminModule\SubjectDetails.aspx" />
+    <Content Include="AdminModule\TestType.aspx" />
+    <Content Include="Homepage.aspx" />
+    <Content Include="resources\css\img\1GraduatedStudents.jpg" />
+    <Content Include="resources\css\img\1herophoto.jpg" />
+    <Content Include="resources\css\img\AdminGrass.jpg" />
+    <Content Include="resources\css\img\AdminWriting.jpg" />
+    <Content Include="resources\css\img\AdminWriting2.jpg" />
+    <Content Include="resources\css\img\back-customers.jpg" />
+    <Content Include="resources\css\img\blur.jpg" />
+    <Content Include="resources\css\img\GraduatedStudents.jpg" />
+    <Content Include="resources\css\img\hero.jpg" />
+    <Content Include="resources\css\img\wheatgrass.jpg" />
+    <Content Include="resources\css\queries.css" />
+    <Content Include="resources\css\style.css" />
+    <Content Include="resources\img\1GirlStudying.jpg" />
+    <Content Include="resources\img\1LogoBlack.png" />
+    <Content Include="resources\img\1LogoWhite.png" />
+    <Content Include="resources\img\2Writing.jpg" />
+    <Content Include="resources\img\3GraduatedGirl.jpg" />
+    <Content Include="resources\img\4Teaching.jpg" />
+    <Content Include="resources\img\5Typing.jpg" />
+    <Content Include="resources\img\6Searchingbook.jpg" />
+    <Content Include="resources\img\7GirlReadingBook.jpg" />
+    <Content Include="resources\img\8BoyStudying.jpg" />
+    <Content Include="resources\img\admin.svg" />
+    <Content Include="resources\img\adminprofile.svg" />
+    <Content Include="resources\img\berlin.jpg" />
+    <Content Include="resources\img\customer-1.jpg" />
+    <Content Include="resources\img\customer-2.jpg" />
+    <Content Include="resources\img\customer-3.jpg" />
+    <Content Include="resources\img\Degree.jpg" />
+    <Content Include="resources\img\DigitalElectronics.jpg" />
+    <Content Include="resources\img\download-app-android.png" />
+    <Content Include="resources\img\herophoto.jpg" />
+    <Content Include="resources\img\iphoneapp.png" />
+    <Content Include="resources\img\lisbon-3.jpg" />
+    <Content Include="resources\img\london.jpg" />
+    <Content Include="resources\img\preloader.gif" />
+    <Content Include="resources\img\san-francisco.jpg" />
+    <Content Include="resources\js\script.js" />
+    <Content Include="StaffModule\AddMarks.aspx" />
+    <Content Include="StaffModule\Attendance.aspx" />
+    <Content Include="StaffModule\ChangePassword.aspx" />
+    <Content Include="StaffModule\Default.aspx" />
+    <Content Include="StaffModule\Home.aspx" />
+    <Content Include="StaffModule\Notice.aspx" />
+    <Content Include="StaffModule\resources\css\StaffStyleSheet.css" />
+    <Content Include="StaffModule\resources\img\happyworking.jpg" />
+    <Content Include="StaffModule\resources\img\Staff_ideas_flow.svg" />
+    <Content Include="StudentModule\ChangePassword.aspx" />
+    <Content Include="StudentModule\Default.aspx" />
+    <Content Include="StudentModule\Home.aspx" />
+    <Content Include="StudentModule\Registration.aspx" />
+    <Content Include="StudentModule\resources\css\StudentStyleSheet.css" />
+    <Content Include="StudentModule\resources\img\HappyStudents.jpg" />
+    <Content Include="StudentModule\resources\img\Student_Standing_on_book.svg" />
+    <Content Include="StudentModule\ViewAttendance.aspx" />
+    <Content Include="StudentModule\ViewMarks.aspx" />
+    <Content Include="vendors\bootstrap\css\bootstrap.css" />
+    <Content Include="vendors\css\animate.css" />
+    <Content Include="vendors\css\grid.css" />
+    <Content Include="vendors\css\ionicons.min.css" />
+    <Content Include="vendors\css\normalize.css" />
+    <Content Include="vendors\fonts\ionicons.svg" />
+    <Content Include="vendors\js\html5shiv.min.js" />
+    <Content Include="vendors\js\jquery-3.6.0.min.js" />
+    <Content Include="vendors\js\jquery.waypoints.min.js" />
+    <Content Include="vendors\js\respond.min.js" />
+    <Content Include="vendors\js\selectivizr.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminModule\Activity.aspx.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\Activity.aspx.designer.cs">
+      <DependentUpon>Activity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\AddMarks.aspx.cs">
+      <DependentUpon>AddMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\AddMarks.aspx.designer.cs">
+      <DependentUpon>AddMarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\ApproveStudent.aspx.cs">
+      <DependentUpon>ApproveStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\ApproveStudent.aspx.designer.cs">
+      <DependentUpon>ApproveStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\CourseDetails.aspx.cs">
+      <DependentUpon>CourseDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\CourseDetails.aspx.designer.cs">
+      <DependentUpon>CourseDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\ManageStaff.aspx.cs">
+      <DependentUpon>ManageStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\ManageStaff.aspx.designer.cs">
+      <DependentUpon>ManageStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\SubjectDetails.aspx.cs">
+      <DependentUpon>SubjectDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\SubjectDetails.aspx.designer.cs">
+      <DependentUpon>SubjectDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminModule\TestType.aspx.cs">
+      <DependentUpon>TestType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminModule\TestType.aspx.designer.cs">
+      <DependentUpon>TestType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.aspx.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Homepage.aspx.designer.cs">
+      <DependentUpon>Homepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaffModule\AddMarks.aspx.cs">
+      <DependentUpon>AddMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffModule\AddMarks.aspx.designer.cs">
+      <DependentUpon>AddMarks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModule\Attendance.aspx.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffModule\Attendance.aspx.designer.cs">
+      <DependentUpon>Attendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModule\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffModule\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModule\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffModule\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModule\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffModule\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModule\Notice.aspx.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffModule\Notice.aspx.designer.cs">
+      <DependentUpon>Notice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StaffModule\Staff.Master.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StaffModule\Staff.Master.designer.cs">
+      <DependentUpon>Staff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModule\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentModule\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModule\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentModule\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModule\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentModule\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModule\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentModule\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModule\Student.Master.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentModule\Student.Master.designer.cs">
+      <DependentUpon>Student.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModule\ViewAttendance.aspx.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentModule\ViewAttendance.aspx.designer.cs">
+      <DependentUpon>ViewAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StudentModule\ViewMarks.aspx.cs">
+      <DependentUpon>ViewMarks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StudentModule\ViewMarks.aspx.designer.cs">
+      <DependentUpon>ViewMarks.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminModule\Admin.Master" />
+    <None Include="packages.config" />
+    <Content Include="resources\img\iphonemock.psd" />
+    <Content Include="vendors\fonts\ionicons.eot" />
+    <Content Include="vendors\fonts\ionicons.ttf" />
+    <Content Include="vendors\fonts\ionicons.woff" />
+    <Content Include="StaffModule\Staff.Master" />
+    <Content Include="StudentModule\Student.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1934</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44377/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

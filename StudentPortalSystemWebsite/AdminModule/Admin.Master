@@ -1,0 +1,262 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="StudentPortalSystemWebsite.AdminModule.Admin" %>
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head runat="server">
+
+    <!-- character encoding NOTE: we must include this in every website -->
+        <meta charset="utf-8"/>
+        
+        <!-- ESSENTIAL PART WHEN BUILDING A RESPONSIVE WEBSITE -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+       
+        <!-- THIS FILE DOWNLOAD FROM GOOGLE "normalize.css"-->
+        <!-- normalize.css render all element more consistently, It precisely targets only the styles that need normalizing. -->
+        <!-- Its like a reset CSS, Which will make CSS look same in all browser -->
+    <link href="../vendors/css/normalize.css" rel="stylesheet" type="text/css" runat="server"/>
+        
+        <!-- grid css -->
+    <link href="../vendors/css/grid.css" rel="stylesheet" runat="server"/>
+        
+        <!-- ionicons css -->
+    <link href="../vendors/css/ionicons.min.css" rel="stylesheet" runat="server"/>
+        
+        <!-- animate.css-->
+    <link href="../vendors/css/animate.css" rel="stylesheet" runat="server"/>
+
+        <!-- Linking CSS file(My created CSS file) -->
+    <link href="../resources/css/style.css" rel="stylesheet" runat="server"/>
+
+        <!-- Admin Custom Style Sheet(Only for Admin module) (My Created CSS file) -->
+    <link href="resources/css/AdminStyleSheet.css" rel="stylesheet" runat="server"/>
+        
+        <!-- queries.css file (for better viewing experience in different device sizes) -->
+        <%--<link rel="stylesheet" type="text/css" href="resources/css/queries.css"  runat="server"/>--%>
+
+    
+
+    <!-- BOOTSTRAP -->
+    <!-- bootstrap.css -->
+    <link href="../vendors/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!-- XXXXX  BOOTSTRAP XXXXX -->
+        
+        <!-- Font : LATO
+            STYLE : Thin 100
+                    Light 300 
+                    Light 300 italic
+                    Regular 400
+                    Regular 400 italic
+                    Bold 700-->
+        <!-- NOTE : DON'T DOWNLOAD THE WHOLE FONT FAMILY BECAUSE THIS WILL DIRECTLY AFFECT THE PAGE LOAD SPEED -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"/>
+        
+        
+
+        <!-- No title on the master page-->
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="admin-body" onload="scrollToForm()">
+
+    <form id="form1" runat="server">
+        <header class="admin-background">
+            <nav class="admin-sticky-nav">
+                <div class="admin-row">
+                    
+                    <asp:HyperLink ID="HyperLink1" runat="server" href="../Homepage.aspx" CssClass="admin-logo">
+                        <img src="../resources/img/1LogoWhite.png" alt="College logo" class="logo"/>
+                    </asp:HyperLink>
+                    <!--
+                    <a href="../Homepage.aspx" class="admin-logo">
+                        <img src="../resources/img/1LogoWhite.png" alt="College logo" class="logo">
+                    </a>
+                    -->
+                    
+                </div>
+                
+                <div class="admin-row admin-nav admin-nav-js--wp">
+                    <ul>
+                        <li>
+                            <!-- ANOTHER UNORDERED LIST -->
+                            <ul class="login-js--wp-2 sticky-user-profile">
+                                <li>
+                                    <img src="../resources/img/adminprofile.svg" class="admin-profile" alt="Admin Profile" />
+                                </li>
+
+                                <li>
+                                    <asp:Label ID="Label1" runat="server" Text="Username" CssClass="sticky-username"></asp:Label>
+                                </li>
+                            </ul>
+                        </li>
+                        
+
+                        <li> 
+                            <a href="Home.aspx">
+                                <i class="ion-android-home icon-module-sticky-nav"></i>
+                                Home</a>
+                        </li>
+
+                        <li> 
+                            <a href="ApproveStudent.aspx">
+                                <i class="ion-checkmark-circled icon-module-sticky-nav"></i>
+                                Approve Student</a>
+                        </li>
+
+                        <li> 
+                            <a href="ManageStaff.aspx">
+                                <i class="ion-android-settings icon-module-sticky-nav"></i>
+                                Manage Staff</a>
+                        </li>
+
+                        <li> 
+                            <a href="Attendance.aspx">
+                                <i class="ion-compose icon-module-sticky-nav"></i>
+                                Mark Attendance</a>
+                        </li>
+
+                        <li> 
+                            <a href="AddMarks.aspx">
+                                <i class="ion-ios-copy icon-module-sticky-nav"></i>
+                                Add Marks</a>
+                        </li>
+
+                        <li> 
+                            <a href="Notice.aspx">
+                                <i class="ion-android-list icon-module-sticky-nav"></i>
+                                Notice Details</a>
+                        </li>
+                        
+                        <li> 
+                            <a href="Activity.aspx">
+                                <i class="ion-ios-navigate icon-module-sticky-nav"></i>
+                                Activity Details</a>
+                        </li>
+
+                        <li> 
+                            <a href="TestType.aspx">
+                                <i class="ion-android-clipboard icon-module-sticky-nav"></i>
+                                Test Type</a>
+                        </li>
+
+                        <li> 
+                            <a href="SubjectDetails.aspx">
+                                <i class="ion-document-text icon-module-sticky-nav"></i>
+                                Subject Details</a>
+                        </li>
+
+                        <li> 
+                            <a href="CourseDetails.aspx">
+                                <i class="ion-android-bookmark icon-module-sticky-nav"></i>
+                                Course Details</a>
+                        </li>
+
+                        <li> 
+                            <a href="ChangePassword.aspx">
+                                <i class="ion-android-sync icon-module-sticky-nav"></i>
+                                Change Password</a>
+                        </li>
+
+                        <li> 
+                            <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" OnClientClick="return confirm('Are you sure you want to Logout?');">
+                                <i class="ion-android-walk icon-module-sticky-nav"></i>
+                                Logout</asp:LinkButton>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+            
+            <!-- HEADING -->
+            <div class="hero-text-box">
+                <!-- HEADING -->
+                <h1>The expert in anything<br>was once a beginner.</h1>
+                <!-- CALL TO ACTION BUTTONS -->
+                <a class="btn btn-full" href="Default.aspx">Logout</a>
+                <a class="btn btn-ghost admin-js--scroll-to-showmore" href="#">Show me more</a>
+            </div>
+            
+        </header>
+
+        <!-- ------------------------------------------------- -->
+        <!-- Main Content Holder -->
+        <!-- ------------------------------------------------- -->    
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+        <!-- ------------------------------------------------- -->
+        <!-- Main Content Holder -->
+        <!-- ------------------------------------------------- -->    
+
+        <footer>
+            
+            <div class="admin-row">
+                
+                <!-- FOOTER - LEFT NAVIGATION -->
+                <div class="col span-1-of-2">
+                    
+                    <ul class="footer-nav">
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">iOS App</a></li>
+                        <li><a href="#">Android App</a></li>
+                    </ul>
+                    
+                </div>
+                
+                <!-- FOOTER - RIGHT NAVIGATION -->
+                <div class="col span-1-of-2">
+                    
+                    <ul class="social-links">
+                        <li><a href="#"><i class="ion-social-facebook"></i></a></li>
+                        <li><a href="#"><i class="ion-social-twitter" id="footer-icon-twitter"></i></a></li>
+                        <li><a href="#"><i class="ion-social-googleplus"></i></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCEdvpU2pFRCVqU6yIPyTpMQ"><i class="ion-social-instagram"></i></a></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            
+            <!-- COPYRIGHT LINE -->
+            <div class="admin-row">
+                
+                <p>
+                    Copyright &copy; 2020 by Student Portal System. All right reserved.
+                </p>
+                
+            </div>
+            
+        </footer>
+
+    </form>
+        
+        
+        
+        <!-- ******************************************************************************** -->
+        <!-- TO MAKE OUR WEBSITE LOOK THE SAME IN OLDER BROWSER OR THE OLDER VERSIONS WE'LL USE THE JAVASCRIPT FILES WHICH ARE DOWNLOADED FROM jsdelivr.com -->
+        <!-- ******************************************************************************** -->
+    
+    <!-- BOOTSTRAP JS FILES -->
+    <%--<script src="../vendors/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../vendors/bootstrap/js/popper.min.js"></script>
+    <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>--%>
+    <!-- xxxxxxxxxxxxxxxxx -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../vendors/js/respond.min.js"></script>
+    <script src="../vendors/js/html5shiv.min.js"></script>
+    <script src="../vendors/js/selectivizr.min.js"></script>
+    <script src="../vendors/js/jquery.waypoints.min.js"></script>
+    <script src="../resources/js/script.js"></script>
+
+    
+</body>
+
+</html>

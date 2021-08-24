@@ -1,0 +1,201 @@
+
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* Big tablet to 1200px: width smaller than the 1140px row */
+@media only screen and (max-width: 1200px) {
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Hero part of the website */
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%; /* 0 at top and bottom and 2% at right and left */
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* row class */
+    .row { padding: 0 2%; }
+}
+
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px) {
+    
+    /* --------------------------------------------------------------------------------- */
+    /* We've used font size in percentage in every section changing only the base font size will help us adjust every other font accordingly . So, remember to use font in percentage, it is a good programming practice */
+    body { font-size:18px; }
+    
+    padding { padding: 60px 0; /* top-bottom = 60px and right-left= 0px */ }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* SECTION 1 */
+    .long-copy {
+        width: 80%; /* to make our para look not too wide, as we learn in typography section */
+        /* Now to center the position of our para we'll use some maths over here */
+        /* we have use 70% width so 30% is left to put our para in center we'll use margin left : 15%; Now, our para will be centered */
+        margin-left: 10%;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* How it works Section : SECTION 3 */
+    .steps-box {margin-top: 10px;}
+    
+    .steps-box:last-child { margin-top: 10px;}
+    
+    .works-step {margin-bottom: 40px;}
+    
+    .works-step:last-of-type {margin-bottom: 80px;}
+    
+    .app-screen {width: 50%;}
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Cities Section : SECTION 4 */
+    .icon-small {
+        width: 17px;
+        margin-right: 5px;
+    }
+    
+    .city-feature {font-size: 90%;}
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Plan Section : SECTION 6 */
+    .plan-box {
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    .plan-price {
+        font-size: 250%;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Form section : SECTION 7 */
+    .contact-form {width: 80%;}
+}
+
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* Small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 767px) {
+    
+    /* --------------------------------------------------------------------------------- */
+    body { font-size: 16px; }
+    
+    section { padding: 30px 0;}
+    
+    .row,
+    hero-text-box { padding: 0 4%;}
+    
+    .col { 
+        width: 100%;
+        margin: 0% 0 4% 0%;  /* margin: TOP RIGHT BOTTOM LEFT*/
+        /* Now we only need margin at bottom and nowhere else */
+        /* you will find this margin code in grid.css file in col class */
+    } 
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Mobile Navigation */
+    
+    .main-nav {display: none;}
+    /* We'll add a mobile navigation over here we'll do this with the help of jQuery so for now , just hiding the main nav */
+    
+    .mobile-nav-icon { display: inline-block; }
+    
+    .main-nav {
+        float: left;
+        margin-top: 35px;
+        margin-left: 25px;
+    }
+    
+    .main-nav li {
+        display: block; /* Now it will force them to have a line break */
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited {
+        display: block;
+        border: 0;
+        padding: 10px 0; /* top-bottom = 5px left-right = 0 */
+        font-size: 100%;
+    }
+    
+    .sticky .main-nav { margin-top: 10px; }
+    
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited {
+        padding: 10px 0px; /* Top-Bottom = 10px and left-right = 0 */ 
+        /* PADDING: the space between the border and the content ,
+        we are adding this to add some space between bottom border and content*/
+    }
+
+    .sticky .mobile-nav-icon { margin-top: 10px; }
+    .sticky .mobile-nav-icon i { color: #555; }
+
+    /* HEADER ---------------------------------------------------------------------------*/
+    h1 { font-size: 180%; }
+    h2 { font-size: 150%; }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* Features section : SECTION 1 */
+    .long-copy {
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    /* --------------------------------------------------------------------------------- */
+    /* How it works Section : SECTION 3 */
+    .works-step { 
+        margin-bottom: 20px;
+        /* I added this three to fix a problem */
+        width: 100%;
+        display: block;
+        float: left;
+    }
+    .app-screen { width: 40%; }
+    
+    /* centering iphone image */
+    .steps-box:first-child { text-align: center;}
+    
+    .works-step:last-of-type { margin-bottom: 20px; }
+    
+    .works-step div {
+        height: 40px;
+        width: 40px;
+        padding: 4px; /* to make the number look centered */ /* its like 4px padding from top */
+        margin-right: 15px;
+        font-size: 120%;
+    }
+    
+    /* Footer Section : Last Section */
+    footer { 
+        padding: 30px; 
+        font-size: 90%;
+    }
+    
+    .footer-nav { 
+        display: block;
+        float: none;
+        text-align: center;
+        margin-bottom: 9px;
+    }
+    
+    .social-links {
+        display: block;
+        float: none;
+        text-align: center;
+    }
+    
+}
+
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------- */
+/* Small phones from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    section { padding: 25px 0; }
+    
+    .contact-form { width: 100%; }
+}

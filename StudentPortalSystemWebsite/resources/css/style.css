@@ -1,0 +1,860 @@
+/*
+ORANGE COLOR : #e67e22
+*/
+
+/*------------------------------------------------------------*/
+/* BASIC SETUP */
+/*------------------------------------------------------------*/
+
+/* The very first thing to do */
+/* Reseting the browser settings */
+/* UNIVERSAL CHANGES */
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*------------------------------------------------------------*/
+/* PRE LOADER */
+/*------------------------------------------------------------*/
+#loading {
+    position: fixed; /* fix image position */
+    width: 100%;
+    height: 100vh;
+    background: #fff/*background color*/ 
+                url('../img/preloader.gif')/*background image*/
+                no-repeat
+                center;
+    overflow: hidden;
+    z-index:99999;
+}
+
+
+
+html,
+body {
+    background-color: #fff;  /* WHITE */
+    color: #555;             /* Default text color for entire project */
+    font-family: 'Lato', 'Arial', sans-serif; /* If Lato font is not available Arial will be used and, If Arial is also not available any sans-serif font will be used */
+    font-weight: 300;       /* Default weight (if you don't specify the weight                                   automatically this one will be applied */
+    font-size: 20px;                    /* Default size */
+    text-rendering: optimizeLegibility; /* This will make the font render in the perfect                                     way */
+    overflow-x: hidden; /* to hide the horizontal scroll bar when content overflow horizontally */
+}
+
+
+.clearfix {zoom:1;}
+/* this class will clear the float after element */
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+    
+}
+
+/*------------------------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*------------------------------------------------------------*/
+
+
+/* CLASS */
+.row {
+    max-width: 1140px;
+    /* margin: 0 auto; (here top & bottom=0 and left & right=auto) */
+    margin: 0 auto; /* CENTERED */
+}
+
+
+section {
+    padding: 80px 0px; /* Top-bottom = 80px, and left-right= 0px */
+}
+
+.box {
+    padding: 2%;
+}
+
+/*------------HEADINGS-------------*/
+
+/* COMMON HEADING PROPERTIES */
+h1,
+h2,
+h3 {
+    font-weight: 300; /* Thickness of fonts */
+    text-transform: uppercase; /* This will make every letter in h1,h2 and h3 tag uppercase */
+}
+
+/* HEADING 1 */
+h1 {
+    margin: 0; /* margin value directly affects the image positioning(background image) */
+    margin-bottom: 20px; /* to add some space between the heading and the buttons(call to action button) */
+    color: #fff; /* white (Text color)*/
+    font-size: 240%; /* this will be the 200% of the value in the html css i.e. 20px and 200% of 20px is 40px, and if you want to change font, change it in the html css and every other related stuff will change accordingly */
+    letter-spacing: 1px;    /* Space between each letters */
+}
+
+/* HEADING 2 */
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;    /* Space between each letters */
+}
+
+/* HEADIING 3 */
+h3 {
+    font-size: 100%;
+    margin-bottom: 15px;
+}
+
+
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22; /* main orange color */
+    content: " ";
+    width: 100px;
+    margin: 0 auto; /* top-bottom = 0 and left-right = auto */
+    margin-top: 30px;
+}
+
+/*------------PARAGRAPH-------------*/
+.long-copy {
+    line-height: 145%;
+    width: 70%; /* to make our para look not too wide, as we learn in typography section */
+    /* Now to center the position of our para we'll use some maths over here */
+    /* we have use 70% width so 30% is left to put our para in center we'll use margin left : 15%; Now, our para will be centered */
+    margin-left: 15%;
+}
+
+/* Every p element inside box class */
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/*------------ICONS-------------*/
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+    
+    /* Secrets to align text and icons */
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+/*
+ORANGE COLOR : #e67e22
+*/
+
+/*------------LINKS-------------*/
+a:link,
+a:visited {
+    color: #e67e22;
+    text-decoration: none;
+    padding: 2px; /* To add some space between the text and the border */
+    border-bottom: 1px solid #e67e22; /* Creating a beautiful underline with the help of border bottom*/
+    -webkit-transition: border-bottom 0.2s, color 0.2s;
+    transition: border-bottom 0.2s, color 0.2s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/*------------BUTTONS-------------*/
+
+
+
+/* :link = pseudo class, this will doesn't change the style after you click */
+/* :visted = pseudo class, Text color will not change after clicking */
+.btn:link,
+.btn:visited,
+input[type=submit] {
+    display: inline-block;
+    margin-right: 15px; /* Adding some space between buttons */
+    padding: 10px 30px; /* Top bottom = 10px, left right = 30px */
+    font-weight: 300;
+    text-decoration: none; /* we added this line to remove the underline of the text */
+    border-radius: 200px; /* For rounded corner */
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    transition: background-color 0.2s, border 0.2s, color 0.2s; /* This will make the transition look smooth , you can try changing the time(in sec) */
+}
+
+/* After visiting that link we don't want to change their color so to avoid that */
+.btn-full:link,
+.btn-full:visited,
+input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    color: #fff; /* Text color */
+}
+
+/* After visiting that link we don't want to change their color so to avoid that */
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22; /* Size(in px), Line type and color */
+    /* Issue : this border will also make this button look bigger than the other one because of its border size so to fix this we'll have to add border to that button also */
+    color: #e67e22; /* Text Color */
+}
+
+/* below class are added to add some functionality after we hover or click with our mouse */
+.btn:hover,
+.btn:active,
+input[type=submit]:hover, 
+input[type=submit]:active {
+    background-color: #cf6d17;
+}
+
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17; /* FIX : after hover border color will also change*/
+}
+
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #e67e22; /* FIX ; after hover border color will also change */
+    color: #fff; /* Text Color : after hover (orange to white) */
+}
+
+
+
+
+
+/*------------------------------------------------------------*/
+/* HEADER */
+/*------------------------------------------------------------*/
+
+.home-page-header {
+    /* In linear-gradient we have added black color with 70% transparency */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))),url(img/1herophoto.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url(img/1herophoto.jpg); /* linking image in css */
+    background-size: cover;  /* image is too big in size and only a part of image is visible so to avoid this we write this code */
+    background-position: center; /* This will always keep the image centered, even if we resize the browser window */
+    height: 100vh; /* 100% of the viewport */
+    background-attachment: fixed; /* background image will stay at fix position */
+}
+
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); /* Translate the element half of its width and of its height, up and to the left */
+}
+
+.logo {
+    height: 100px;
+    width: auto; /* it will be set automaticaly according to the image size */
+    float: left; /* It will make the logo to float all the way to the left and allow other element to float with it (side by side) */
+    margin-top: 20px;
+    z-index: 7000;
+}
+
+.logo-black { 
+    display: none; 
+    height: 50px;
+    width: auto; /* it will be set automaticaly according to the image size */
+    float: left; /* It will make the logo to float all the way to the left and allow other element to float with it (side by side) */
+    margin: 5px 0; /* top-bottom = 5px and right-left = 0px */
+}
+
+/* MAIN NAVIGATION */
+
+.main-nav {
+    float: right; /* navigation will float all the way to the right */
+    list-style: none;
+    margin-top: 55px;
+}
+
+.main-nav li {
+    display: inline-block; /* from list to side by side */
+    margin-left: 40px; /* each of those block will have left margin of 40px */
+}
+
+/* We want the link to stay the same after visiting those link, this following changes will help */
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0px; /* PADDING: the space between the border and the content ,
+    we are adding this to add some space between bottom border and content*/
+    color: #fff; /* White */
+    text-decoration: none; /* for removing underline from the text */
+    text-transform: uppercase;
+    font-size: 90%; 
+    border-bottom: 2px solid transparent;/* border will be their but it will be transparent */
+    -webkit-transition: border-bottom 0.2s;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22; /* after mouse hover we'll see a nice border */
+}
+
+
+/* MOBILE NAVIGATION */
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer; /* we need to specify the pointer, because we didn't use href attribute in html document and if we don't use that attribute in any link then the cursor doesn't change to pointer */
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/* STICKY NAVIGATION */
+
+.sticky {
+    cursor: pointer;
+    position: fixed; /* for fixed position */
+    top: 0; /* we want to display it on the top left so we need to mention it */
+    left: 0;
+    width: 100%; 
+    background-color: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 2px 2px #efefef; /* X axis , y axis, blur , color */
+    z-index: 9999; /* to make sticky nav to be always on the top of any other element by putting the highest value i.e. 9999 */
+}
+
+.sticky .main-nav { margin-top: 18px; }
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited {
+    padding: 19px 0px; /* PADDING: the space between the border and the content ,
+    we are adding this to add some space between bottom border and content*/
+    color: #555; /* Grey Same as our webpage font color */
+}
+
+/* We want black logo to display inside sticky nav and white to hide */
+.sticky .logo { display: none; }
+.sticky .logo-black { display: block; }
+
+
+/*------------------------------------------------------------*/
+/* FEATURES - SECTION 1 */
+/*------------------------------------------------------------*/
+.section-features .long-copy {
+    margin-bottom: 40px;
+}
+
+/*------------------------------------------------------------*/
+/* MEALS - SECTION 2 */
+/*------------------------------------------------------------*/
+
+/* there is a large gap between section 2 and section 3 so to reduce that we will use padding property in css */
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    /* As it is inside list and we dont want those bullets, so we'll choose list style = noen */
+    list-style: none;
+    width: 100%;
+}
+
+/* FOR ALL THE li ELEMENTS INSIDE THE meals-showcase class */
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%; /* as we have four li elements we'll divide 100 by 4 i.e. 25, so each image will take 25% and cover the full width */
+}
+
+.meal-photo {
+    width: 100%; /* its parent class is meals-showcase so it will take 100% of the above 25% */
+    margin: 0; /* overwrite(we have overwritten this value for some reason) */
+    overflow: hidden;
+    background-color: #000; /* We have reduce the images opacity and to give them a darker shade we are adding the black background color */
+}
+
+/* FOR BETTER RESULT USE IMAGES WITH SAME ASPECT RATIO AS WE DID HERE */
+.meal-photo img {
+    opacity: 0.7; /* opacity: 70% */
+    width: 100%; /* it will assure that the image is exactly as wide as its container */
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15); /* the images will be 115% bigger instead of 100% */
+    /* this will increase the image size and overflow from the container so, to
+    avoid that we'll add overflow: hidder; in above class */
+    -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: opacity 0.5s, -webkit-transform 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s; /* animation */
+}
+
+/* TO ADD TRANSITION EFFECT WHEN WE HOVER MOUSE OVER THIS IMAGES */
+/* You can use hover with every element */
+.meal-photo img:hover {
+    opacity: 1; /* opacity : 100% */
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
+}
+
+/*------------------------------------------------------------*/
+/* HOW IT WORKS - SECTION 3 */
+/*------------------------------------------------------------*/
+
+.section-steps {
+    background-color: #f4f4f4;
+}
+
+/* LEFT BOX/COLUMN */
+.steps-box:first-child {
+    text-align: right;
+    padding: 3%;
+    margin-top: 30px;
+}
+
+/* RIGHT BOX/COLUMN */
+.steps-box:last-child {
+    padding: 3%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+/* last-of-type is similar to last child */
+.works-step:last-of-type {
+    margin-bottom: 50px;
+}
+
+.works-step div {
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block; /* this will make this element a inline block element */
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px; /* to make the number look centered */
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+/* Following code will remove the unneccesary border-bottom */
+.btn-app:link,
+.btn-app:visited {
+    border: 0;
+}
+.btn-app img {
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+}
+
+
+/*------------------------------------------------------------*/
+/* NOTICE - SECTION 4 */
+/*------------------------------------------------------------*/
+
+/* To add some space between the box border and the notice heading */
+.section-cities h3 {
+    padding: 4%;
+}
+
+.notice-text {
+    padding-bottom: 15px;
+    padding-left: 2%;
+    padding-right:2%;
+}
+
+.notice-style {
+    transform: scale(1); /* for smoothing transition effect after mouse hover ends */
+    transition: transform 0.4s;
+    color: #fff;
+    padding: 0; /* 0 padding = no space between box edge and the content */
+    background-color: #1e2021; 
+    border-radius: 10px; /* Curve Edges */
+}
+
+
+/* This will be applied to all the last div tags inside .notice-style class */
+.notice-style div:last-child {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.notice-style div {
+    padding: 2%;
+}
+
+.notice-style:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s;
+}
+
+.notice-style img{
+    border-radius: 10px;
+}
+
+.box img {
+    width: 100%;
+    height: 50%;
+    margin-bottom: 15px;
+}
+
+.city-features {
+    margin-bottom: 5px;
+}
+
+/*------------------------------------------------------------*/
+/* CUSTOMER TESTIMONIALS - SECTION 5 */
+/*------------------------------------------------------------*/
+
+.section-testimonials {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.8))), url(img/back-customers.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/1GraduatedStudents.jpg); /* Adding a background image inside CSS and we added a linear gradient(black colour and 80% transparency) to make this image look darker*/
+    background-size: cover; /* to cover the full width of the browser */
+    color: #fff; /* All text color will change to white */
+    background-attachment: fixed; /* this will give a cool effect to our website */
+}
+
+/* Type selector */
+blockquote {
+    font-size: 90%;
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+/* to add big quote symbols before blockquote text */
+blockquote:before {
+    content: "\201C"; /* ISO in CSS you can search it online , here \201C means a left quotation mark */
+    font-size: 500%;
+    display: block; /* we want this quotation mark on a new line for that we'll use this property */
+    position: absolute; /*NOTE: when ever we are declaring absolute position its parent element should be in relative position */
+    top: -5px;
+    left: -5px;
+}
+
+/* Type selectore */
+cite {
+    font-size: 90%;
+    margin-top: 25px;
+    display: block; /* cite element will be display as a block element */
+}
+
+/* Hierarchy Selector */
+cite img {
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*------------------------------------------------------------*/
+/* PRICE PLAN AND SIGN UP - SECTION 6 */
+/*------------------------------------------------------------*/
+
+.sign-up-height {
+    height: 300px;
+}
+
+.section-plans {
+    background-color: #f4f4f4;
+}
+
+/* news image */
+.news-photo {
+    width: 100%;
+    margin:0;
+    overflow: hidden;
+    background-color: #fff;/*#1e2021;*/
+}
+/* whole image to appear in the box */
+.news-photo img {
+    width: 100%; /* it will assure that the image is exactly as wide as its container */
+    height: auto;
+}
+
+.section-plans p {
+    color: #555;
+}
+
+/* News Heading text */
+.plan-box div h3 {
+    font-size: 100%;
+    font-weight: 300;/*300;*/
+    color: #e67e22;/*#fff;*/ 
+}
+
+.plan-box {
+    background-color: #fff;/*#27292b;*/
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    box-shadow: 0 2px 2px #efefef; /* x axis, y axis, blur, color */
+    transform: scale(1);
+    transition: transform 0.4s;
+}
+
+/* PLAN BOX FULL SIGN IN BOX HOVER EFFECT PROPERTIES */
+.plan-box:hover {
+    transform: scale(0.94);
+    transition: transform 0.6s;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.plan-box div:first-child {
+    background-color: #fff;/*#1e2021; /* Price section will have i very light grey shade */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child {
+    text-align: center;
+    border: 0; /* We don't require a border at the bottom of the last section */
+}
+
+.plan-price {
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100; /* Font thickness */
+    color: #e67e22; /* text color */
+}
+
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0; /* top and bottom = 5px and left and right = 0px */
+}
+
+
+/*------------------------------------------------------------*/
+/* FORM - SECTION 7 */
+/*------------------------------------------------------------*/
+
+.contact-form {
+    width: 60%; /* now it will be the 60% of the full width */
+    margin: 0 auto; /* to center the whole form (top bottom 0 and left right auto)*/
+}
+
+/* adding type after input will prevent button and newsletter to use full width */
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=checkbox] {
+    margin: 10px 5px 10px 0; /* Top right bottom left */
+}
+
+/* To get rid of unnecesary highligthing of borders when we click on them */
+*:focus {outline: none;}
+
+/*------------------------------------------------------------*/
+/* FOOTER - SECTION 8 */
+/*------------------------------------------------------------*/
+
+footer {
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 160%;
+}
+
+.ion-social-facebook,
+.ion-social-twitter,
+.ion-social-googleplus,
+.ion-social-instagram {
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+/* FACEBOOK ICON */
+.ion-social-facebook:hover {
+    color: #3b5998;
+}
+
+/* TWITTER ICON */
+/*
+.ion-social-twitter:hover {
+    color: #00aced;
+}
+i commented this because this was also adding hover effect in twitter icon inside cities section that is why i created id for the footer twitter icon and added the effect */
+
+#footer-icon-twitter:hover {
+    color: #00aced;
+}
+
+
+/* GOOGLEPLUS ICON */
+.ion-social-googleplus:hover {
+    color: #dd4b39;
+}
+
+/* INSTAGRAM ICON */
+.ion-social-instagram:hover {
+    color: #517fa4;
+}
+
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+    color: #ddd;
+}
+
+footer p {
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*------------------------------------------------------------*/
+/* ANIMATIONS */
+/*------------------------------------------------------------*/
+
+/* LOGIN PAGE ANIMATION */
+.login-js--wp-1,
+.login-js--wp-2,
+.login-js--wp-3,
+.login-js--wp-4 {
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.login-js--wp-1 .animated,
+.login-js--wp-2 .animated,
+.login-js--wp-3 .animated,
+.login-js--wp-4 .animated {
+    opacity: 1;
+}
+/* xxxxxxxxxxxxxxxxxxxx */
+
+.js--wp-1,
+.js--wp-2,
+.js--wp-3 {
+    opacity: 0; /* display: none; won't work here, but there are many other ways to do the same
+    by setting opacity to 0 now it will not be visible */
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.js--wp-4 {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+/* for this below block to be executed both classes should be there at same time */
+.js--wp-1 .animated,
+.js--wp-2 .animated,
+.js--wp-3 .animated {
+    opacity: 1;
+}
+
+
+
+
+
+/*-----------------------------------------*/
+/* ----------------------------------------*/
+/* SCROLL BAR */
+/*-----------------------------------------*/
+/*-----------------------------------------*/
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
